@@ -230,6 +230,7 @@ After doing this, respond to the following prompt:
 6. Compare your 3-D scatterplot and the `GGally::ggpairs` output.
   Comment on the strengths and weaknesses of these two visualizations.
   Do both display on GitHub when you push your work there?
+  I can only locate the ggpairs plot in github. However I like both visualizations. However, the 3D plot gives you a better visualization - whereas the 2d scatter plot is easier to see linearity.
 
 # Day 2
 
@@ -258,9 +259,9 @@ Fortunately, we can create our own.
 - In the code chunk below titled `binary-pred`, replace "verbatim" with "r" just before the code chunk title.
 - Run your code chunk or knit your document.
   
-```{verbatim binary-pred}
+```{r binary-pred}
 hfi_2016 <- hfi_2016 %>%
-  mutate(west_atlantic = if_else(
+  mutate(east_atlantic = if_else(
     region %in% c("North America", "Latin America & the Caribbean"),
     "No",
     "Yes"
