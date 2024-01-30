@@ -22,9 +22,13 @@ Remember that [Emil Hvitfeldt](https://www.emilhvitfeldt.com/) (of Posit) has pu
   Be sure to check both your **User Library** and **System Library**.
 - If either of these are not currently listed (they should be because you verified this in Activity 1), type the following in your **Console** pane, replacing `package_name` with the appropriate name, and  press Enter/Return afterwards.
   
-  ```{r  eval = FALSE}
-  install.packages("package_name")
-  ```
+
+```{r setup}
+library(tidyverse)
+library(tidymodels)
+library(Hmisc)
+library(ggplot2)
+```
 
 - Once you have verified that both `{tidyverse}` and `{tidymodels}` are installed (in either your user or system library), load these packages in the R chunk below titled `load-packages`.
   

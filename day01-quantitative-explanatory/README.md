@@ -20,6 +20,8 @@ Take a few moments to review your `activity02.Rmd` file (the one from
 last week) and take note of: - What do you like about its organization
 and what would you do differently? - What markdown skills do you
 practice/expand in this week’s activity?
+Since STA 518 I have used Rmarkdown files for everything I do in R - the usability is unmatched and the formatting capabilities 
+makes working with these type of files extremely easy.
 
 Consider my `README` documents and how they are organized. I do not
 think these are the “best” way, but they do follow typical standards
