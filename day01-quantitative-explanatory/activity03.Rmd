@@ -203,14 +203,6 @@ Ideally, this would be something that plays nicely with (looks similar to) `{ggp
 - Create a new R code chunk, with a descriptive name, and add your code to create this plot.
 ```{r scatterplot}
 library(scatterplot3d)
-
-# Assuming 'hfi_2016' is your data frame
-hfi_2016 <- data.frame(
-  pf_score = rnorm(100),
-  pf_expression_control = rnorm(100),
-  pf_rank = rnorm(100)
-)
-
 # Create a 3D scatter plot
 scatterplot3d(
   x = hfi_2016$pf_score,
@@ -266,6 +258,7 @@ hfi_2016 <- hfi_2016 %>%
     "No",
     "Yes"
   ))
+hfi_2016
 ```
 
 7. What is happening in the above code? What new variable did we create? How do you know it is new? What values does it take when?
@@ -274,10 +267,10 @@ hfi_2016 <- hfi_2016 %>%
 - In the code chunk below titled `qual-mlr`, replace "verbatim" with "r" just before the code chunk title.
 - Run your code chunk or knit your document.
 
-```{verbatim qual-mlr}
+```{r qual-mlr}
 # review any visual patterns
 hfi_2016 %>% 
-  select(pf_score, west_atlantic, pf_expression_control) %>% 
+  select(pf_score, east_atlantic, pf_expression_control) %>% 
   ggpairs()
 
 #fit the mlr model
@@ -286,7 +279,7 @@ lm_spec <- linear_reg() %>%
   set_engine("lm")
 
 qual_mod <- lm_spec %>% 
-  fit(pf_score ~ west_atlantic + pf_expression_control, data = hfi_2016)
+  fit(pf_score ~ east_atlantic + pf_expression_control, data = hfi_2016)
 
 # model output
 tidy(qual_mod)
